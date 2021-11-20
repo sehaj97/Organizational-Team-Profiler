@@ -7,8 +7,8 @@ function generateCard(data){
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${data.id}</li>
-                <li class="list-group-item">ID: ${data.email}</li>
+                <li class="list-group-item">ID: ${data.getId()}</li>
+                <li class="list-group-item">Email: ${data.getEmail()}</li>
                 <li class="list-group-item">${getFinalInfo(data)}</li>
             </ul>
         </div>
@@ -19,7 +19,13 @@ function generateCard(data){
 
 function getFinalInfo(data){
     if(data.getRole() === 'Manager'){
-        return `Office Number: ${data.officeNumber}`
+        return `Office Number: ${data.getOfficeNumber()}`
+    }
+    if(data.getRole() === 'Engineer'){
+        return `Github: ${data.getGithub()}`
+    }
+    if(data.getRole() === 'Intern'){
+        return `School: ${data.getSchool()}`
     }
 }
 
