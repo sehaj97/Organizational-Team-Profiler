@@ -31,7 +31,7 @@ This project is build using ES6 AND NODEjs And uses Jest library for unit testin
 
   
 ## Usage
-to use this application look at installion steps and the run 'node index'  
+to use this application run 'node index'  
 
 This application is used to input the employee information and display it in friendly UI way. 
 
