@@ -1,14 +1,14 @@
 
 function generateCard(data){
     return `
-    <div class="col">
+    <div class="col m-3 d-flex justify-content-center align-items-center">
     <div class="card" style="width: 18rem;">
         <div class="card-body bg-primary text-white">
-            <h5 class="card-title">${data.getName()}</h5>
+            <h5 class="card-title">${data.getName().toUpperCase()}</h5>
             <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${data.getId()}</li>
-                <li class="list-group-item">Email: ${data.getEmail()}</li>
+                <li class="list-group-item">Email: <a href="mailto: ${data.getEmail()}">${data.getEmail()}</a></li>
                 <li class="list-group-item">${getFinalInfo(data)}</li>
             </ul>
         </div>
@@ -22,7 +22,7 @@ function getFinalInfo(data){
         return `Office Number: ${data.getOfficeNumber()}`
     }
     if(data.getRole() === 'Engineer'){
-        return `Github: ${data.getGithub()}`
+        return `Github: <a href="https://github.com/${data.getGithub()}">${data.getGithub()}</a>`
     }
     if(data.getRole() === 'Intern'){
         return `School: ${data.getSchool()}`
